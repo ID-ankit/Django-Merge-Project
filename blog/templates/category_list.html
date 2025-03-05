@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <h1>Posts in category: {{ category.name }}</h1>
+<div class="row" style="display: flex; justify-content: center;  flex-wrap: wrap;">
+    {% for post in posts %}
+        <div class="col-12 col-md-4 pt-5">
+            <div class="card" style="box-shadow:4px 4px 5px  #ebebc9; border-radius: 7px; ">
+                <div class="img">
+                    {% if post.post_image %}
+                    <a href="{% url 'post_detail' slug=post.slug %}">
+                        <img style="height: 200px; width: 100%; border-radius: 7px;" src="{{ post.post_image.url }}" alt="Profile Picture">
+                    </a>
+                    {% else %}
+                    {% endif %}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h5>
+                    <p class="card-text ;">{{ post.text|truncatechars:100 }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Edit Profile</title>
+</head>
+
+<body>
+	{% block content %}
+	<div class="PROFILEEDIT" style="display: flex;justify-content: center;">
+		<div class="container"
+			style="border: 2px solid black; border-radius: 5px; width: auto;padding: 10px;background-color: #fff;">
+			<div class="login" style="border: 10px;">
+				<h2>Edit Profile</h2>
+				<form method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					<div class="edit-profile" style="display: flex;gap: 20px;">
+						<div style="display: flex;flex-direction: column;gap: 20px;">
+							<label>Image</label>
+							<label>first_name</label>
+							<label>ph_no</label>
+							<label>email</label>
+							<label>city</label>
+							<label>state</label>
+							<label>country</label>
+						</div>
+						<div style="display: flex;flex-direction: column;gap: 20px;">
+							<input type="file" name="image" value="{{ user.image }}" >
+
+							<input type="text" name="username" value="{{ user.first_name }}" maxlength="150" required=""
+								id="id_first_name">
+							<input type="text" name="ph_no" value="{{ user.ph_no }}" maxlength="30" id="id_ph_no">
+							<input type="email" name="email" value="{{ user.email }}" maxlength="254" id="id_email">
+							<input type="text" name="city" value="{{ user.city }}" maxlength="400" id="id_city">
+							<input type="state" name="state" value="{{ user.state }}" maxlength="254" id="id_state">
+							<input type="country" name="country" value="{{ user.country }}" maxlength="254"
+								id="id_country">
+						</div>
+					</div>
+					<div style="display: flex;justify-content: center;padding-top:15px;">
+						<button style="width: 100px;padding: 5px;background-color: #C25100;color: white;border-radius: 20px;border-color: #C25100;" type="submit">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	{% endblock %}
+</body>
+
+</html>

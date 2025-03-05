@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Profile Page{% endblock title %}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>profile</title>
+        <style>
+
+    
+            
+            /* body {
+                    height: 100%;
+                    margin: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: Arial, sans-serif;
+            } */
+            .profile {
+                text-align: center;
+                border: 2px solid #ddd;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                max-width: 400px;
+                width: 100%;
+                background-color: #fff;
+                
+            }
+
+            h1 {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+
+            img {
+                margin-bottom: 20px;
+                text-align: left;
+            }
+
+            p {
+            margin: 8px 0;
+            font-size: 16px;
+            color: #333;
+            text-align: left;
+            }
+
+        </style>
+    </head>
+    <body style="display: block; align-items: center;">
+        <div class="kkkk" style="display: flex; justify-content: center;">
+        <div class="profile">
+            <h1>User Profile {{User.username}}</h1>
+            <div class="img">
+                {% if user.image %}
+                    <img style="height: 100px; width: 100px;" src="{{ user.image.url }}" alt="Profile Picture">
+                {% else %}
+                    <img style="height: 100px; width: 100px;" src="{% static 'images/default-profile.png' %}" alt="Default Profile Picture">
+                {% endif %}
+            </div>
+                <p>{{ user.first_name }}</p>
+                <p>{{ user.ph_no }}</p>
+                <p>{{ user.email }}</p>
+                <p>{{ user.city }}</p>
+                <p>{{ user.state }}</p>
+                <p>{{ user.country }}</p>
+            <div>
+                <button><a  style="text-decoration: none;" href="{% url 'edit_profile_page' %}"><i class="fa-solid fa-pencil" style="color: #4913ec ;"></i>&nbsp;&nbsp;edit profile</button></a>
+            </div>
+            </div>
+
+        </div>
+    </body>
+    </html>
+{% endblock content %}

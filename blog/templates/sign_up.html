@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+
+{% block content %}
+<div  style="display: flex;justify-content: center;">
+    <div class="form-container" style="border: 2px solid rgb(73, 67, 67); border-radius: 10px; width: 500px; padding: 10px; background-color: white;">
+        <h2>Sign Up</h2>
+        <form method="post" enctype="multipart/form-data" >
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {% for field in form %}
+            <br>
+                <div class="form-group" style="display: flex; justify-content: space-between;">
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {{ field.errors }}
+                </div>
+            {% endfor %}
+            <br>
+            <div style="display: flex;justify-content: center;">
+                <button style="width: 100px;padding: 5px;background-color: #C25100;color: white;border-radius: 20px;border-color: #C25100;" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,219 @@
+body, html {
+   
+    font-family: Arial, sans-serif;
+    
+}
+
+
+.page-header {
+    background-color: #C25100;
+    margin-top: 0;
+    margin-bottom: 40px;
+    /* padding: 20px 20px 20px 40px; */
+    width: 100%;
+}
+
+.page-header h1,
+.page-header h1 a,
+.page-header h1 a:visited,
+.page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3{
+    text-align: center;
+    
+}
+h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea,
+.post-form input {
+    width: 100%;
+}
+
+.top-menu,
+.top-menu:hover,
+.top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h2 a,
+.post h2 a:visited {
+    color: #000000;
+}
+
+.post > .date,
+.post > .actions {
+    float: right;
+}
+
+.btn-secondary,
+.btn-secondary:visited {
+    color: #C25100;
+    background: none;
+    border-color: #C25100;
+}
+
+.btn-secondary:hover {
+    color: #FFFFFF;
+    background-color: #C25100;
+}
+
+button{
+    /* display: inline; */
+    height: auto;
+    justify-content: center;
+    /* justify-content: center; */
+    /* justify-items: center; */
+} 
+
+
+
+/* .sign_up{
+display:inline-block;
+background-color: rgb(223, 223, 226);
+border: #160e0e;
+border-width: 700px;
+border-radius: 5px;
+padding: 15px;
+
+}
+h3{
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: normal;
+    font-family: sans-serif;
+}
+label{
+    font-size: 20px;
+    font-weight: normal;
+    font-family: sans-serif;
+    display: block;
+    margin-top: 10px;
+    color: #222222;
+}
+input{
+    width: 450px;
+    padding: 5px;
+    margin-top: 1px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+input:focus{
+    background: #ffffff;
+}
+input[type="file"]{
+    background: #fff;
+}
+button {
+    display: block;
+    width: 100px;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: #a9b3bb;
+    border-radius: 5px;
+    font-size: 16px;
+    transition  : #5d7a87;
+
+} */
+/* .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.sign_up {
+    width: 400px; 
+    padding: 25px;
+    padding-left: 25px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+ */
+
+/* label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 96%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+} */
+
+/* /* button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+} */
+
+/* button:hover {
+    background-color: #0056b3;
+} */ 
+
+
+/* .profile {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.profile img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 15px;
+} */
+
+/* .profile p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+} */
+

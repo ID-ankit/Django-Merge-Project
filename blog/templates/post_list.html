@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div class="row" style="display: flex; flex-wrap: wrap;">
+		{% for post in posts %}
+			<div class="col-12 col-md-4 pt-5">
+				<div class="card" style="box-shadow:4px 4px 5px  #ebebc9; border-radius: 7px; ">
+					<div class="img">
+						<a href="{% url 'post_detail' post.slug %}">
+						<img style="height: 200px; width: 100%; border-radius: 7px;" src="{% if post.post_image %}{{ post.post_image.url }}{% else %}{% endif %}" alt="Profile Picture">
+						</a>
+					</div>
+					<div class="card-body">
+						<h5 class="card-title"><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h5>
+						<p>Category:- <a href="{% url 'category' slug=post.category.slug %}">{{post.category}}</a></p>
+						<p>Tag:-
+							{% for tag in post.tags.all %} 
+							<a style="text-decoration: none;" href="{% url 'tags' slug=tag.slug %}">{{tag}} |</a>
+							{% endfor %}
+						</p>
+						<p class="card-text ;">{{ post.text|truncatechars:150 }}</p>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	</body>
+
+
+</html>
+{% endblock %}
